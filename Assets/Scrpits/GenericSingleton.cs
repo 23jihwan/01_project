@@ -9,7 +9,7 @@ public class GenericSingleton<T> : MonoBehaviour where T : Component
     {
         get
         {
-            if (_instance == null)
+            if(_instance == null)
             {
                 _instance = FindObjectOfType<T>();          //인스턴스 오브젝트를 찾는다.
                 if (_instance == null)
@@ -29,7 +29,7 @@ public class GenericSingleton<T> : MonoBehaviour where T : Component
             _instance = this as T;
             DontDestroyOnLoad(gameObject);  //게임 오브젝트가 Scene이 전환되고 파괴되지 않음
         }
-        else if (_instance != null)
+        else if(_instance != null)
         {
             Destroy(gameObject);  //1개로 유지시키기 위해 생성된 객체를 파괴한다. 
         }

@@ -8,7 +8,7 @@ public class Singleton : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)                                        //Instance가 NULL일때
+        if(Instance == null)                                        //Instance가 NULL일때
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);                          //게임 오브젝트가 Scene이 전환되고 파괴되지 않음
@@ -26,4 +26,3 @@ public class Singleton : MonoBehaviour
         playerScore += amount;
     }
 }
-
